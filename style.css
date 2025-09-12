@@ -76,7 +76,7 @@ body {
 #hero-container img {
   max-width: 900px;
   border: rgb(136, 217, 159) solid 5px;
-  box-shadow: whitesmoke 0px 0px 60px 30px;
+  box-shadow: whitesmoke 0px 0px 100px 40px;
 }
 
 
@@ -464,7 +464,7 @@ iframe {
   width: 80%;
   min-width: 250px;
   border: black solid 10px;
-  box-shadow: whitesmoke 0px 0px 25px 20px;
+  box-shadow: whitesmoke 0px 0px 50px 15px;
 }
 
 /* Footer */
@@ -743,9 +743,22 @@ footer {
   .special-offer {
     width: 290px;
     max-width: 100%;
-    height: 380px;
+    height: 390px;
     min-width: 260px;
   }
+
+  .special-offer:first-of-type {
+  box-shadow: rgb(151, 201, 148) -30px 15px 150px 20px;
+  }
+
+  .special-offer:nth-of-type(2) {
+    box-shadow:rgb(151, 201, 148) 0 20px 150px 15px;
+  }
+
+  .special-offer:nth-of-type(3) {
+    box-shadow: rgb(151, 201, 148) 30px 15px 150px 20px;
+  }
+
 
   .special-item {
     height: 3rem;
@@ -754,7 +767,7 @@ footer {
   }
 
   .special-item h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .prices {
