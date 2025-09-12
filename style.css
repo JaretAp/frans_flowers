@@ -468,9 +468,11 @@ footer {
 
 @media (max-width: 630px) {
   .title {
+    display: flex;
     font-size: 3rem;
     min-width: 250px;
     max-width: 90%;
+    justify-self: center;
   }
 
   h2 {
