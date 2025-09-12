@@ -457,6 +457,7 @@ iframe {
 }
 
 #frame-holder {
+  max-width: 920px;
   margin-inline: auto;
   height: 350px;
   margin-top: 3rem;
