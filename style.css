@@ -460,7 +460,13 @@ footer {
 
 /* MAX WIDTH MEDIA QUERY */
 
-@media (max-width: 570px) {
+@media (max-width: 800px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 610px) {
   .title {
     font-size: 3rem;
     min-width: 250px;
