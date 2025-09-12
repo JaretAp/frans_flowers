@@ -475,6 +475,12 @@ footer {
     justify-self: center;
   }
 
+  .header-content {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+
   h2 {
     font-size: 3rem;
     min-width: 250px;
