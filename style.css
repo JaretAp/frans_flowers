@@ -595,6 +595,10 @@ footer {
   header .header-content .tagline, .bright {
     font-size: .75rem;
   }
+
+  header .header-content {
+    max-width: 260px;
+  }
 }
 
 /* MIN-WIDTH MEDIA QUERY */
