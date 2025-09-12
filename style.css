@@ -597,6 +597,8 @@ footer {
   }
 
   header .header-content {
+    align-self: center;
+    justify-self: center;
     max-width: 260px;
   }
 }
