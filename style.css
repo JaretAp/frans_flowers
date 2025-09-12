@@ -280,6 +280,7 @@ main {
 
 .specials {
   display: flex;
+  align-items: center;
   flex-direction: column;
   border-bottom: gold solid 5px;
   padding-bottom: 3rem;
@@ -304,19 +305,19 @@ main {
   max-width: 100%;
   justify-content: center;
   align-items: center;
-  justify-items: center;
 }
 
 .special-offer {
   background-color: rgb(7, 7, 7);
   padding-bottom: 1rem;
   margin-top: 3rem;
-  height: 600px;
+  height: 500px;
   position: relative;
   max-width: 80%;
   width: 450px; 
   border: white solid 4px;
   box-shadow: 0px 0px 10px white;
+  margin-inline: auto;
 }
 
 .special-item {
@@ -372,6 +373,7 @@ main {
 
 .photo-container img {
   padding-top: 1.5rem;
+  max-width: 90%;
 }
 
 
@@ -531,7 +533,7 @@ footer {
   .special-offer {
     width: 280px;
     max-width: 100%;
-    height: 400px;
+    height: 380px;
     min-width: 260px;
   }
 
@@ -613,14 +615,26 @@ footer {
     min-width: 500px;
   }
   
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-content{
+    margin-inline: center;
+    text-align: center;
+  }
+
   header,
   .specials {
     justify-items: center;
     justify-content: center;
-  }
+  } 
+
+  
 
   .specials h2 {
-    margin-left: calc(50% - 550px);
+    margin-inline: auto;
   }
 
   .specials-list {
@@ -666,8 +680,9 @@ footer {
   }
 
   .visit-us {
-    justify-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .visit-us h2 {
