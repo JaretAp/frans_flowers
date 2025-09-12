@@ -462,6 +462,7 @@ footer {
 @media (max-width: 800px) {
   .title {
     font-size: 5.5rem;
+    
   }
 }
 
@@ -469,6 +470,7 @@ footer {
   .title {
     font-size: 3rem;
     min-width: 250px;
+    max-width: 90%;
   }
 
   h2 {
