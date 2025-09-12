@@ -471,7 +471,6 @@ footer {
     font-size: 3rem;
     min-width: 250px;
     text-align: center;
-    transform: translateX(-1rem);
   }
 
   .header-content {
