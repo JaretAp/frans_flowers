@@ -1,33 +1,655 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  min-width: 250px;
+}
+
 /* Base Styles */
 body {
-  color: royalblue;
   text-align: center;
-  background-color: bisque;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Typography */
+
+/*
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-bold {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tinos-regular-italic {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tinos-bold-italic {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+ */
+
+.title, h2 {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 7rem;
+  letter-spacing: .1rem;
+}
+
+.header-content,
+.about-us h2,
+.about-us p,
+.specials h2,
+.visit-us h2,
+.visit-us .contact-info,
+.footer-content {
+  max-width: 1100px;
+}
+
+#hero-container img {
+  max-width: 900px;
+}
+
+
+header .header-content .tagline {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;  /* Font weights from 400 - 700*/
+  font-style: normal;
+  font-size: 1.80rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+/* Header Section */
+header {
+  border-bottom: gold solid 5px;
+  padding: 3rem 0 3rem 0;
+  background-color: #FC5E53;
+  color: #F9FDFF;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+}
+
+.stack {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+
+.stack .shadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  font: inherit;
+  letter-spacing: inherit;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 2px rgba(0,0,0,.8);
+}
+
+.stack .front {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: linear-gradient(
+    to top,
+    #FFAC38 0%,
+    #FFAC38 30%,
+    #F9FDFF 55%,
+    #F9FDFF 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.stack-2 {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+
+.stack-2 .shadow-2 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  font: inherit;
+  letter-spacing: inherit;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 2px rgba(0,0,0,.8);
+}
+
+.stack-2 .front-2 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: linear-gradient(
+    to top,
+    #DA0E00 0%,
+    #DA0E00 20%,
+    #F9FDFF 55%,
+    #F9FDFF 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.bright {
+  color: #FFEF72;
+  padding-right: .4rem;
+}
+
+.taglline {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
 
 /* Links & Accents */
 
 /* Images */
 
-/* Hero Section */
 
+
+
+#hero-container img {
+  width: 80%;
+  height: auto;
+}
+
+/* Hero Section */
+#hero-container {
+  border-bottom: gold solid 5px;
+  justify-content: center;
+  display: flex;
+  padding: 5rem 0 5rem 0; 
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+}
 /* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 
 /* About Section */
+.about-us {
+  border-bottom: gold solid 5px;
+  padding-top: 3rem 0 3rem 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  ); 
+}
+
+.about-us h2 {
+  padding-top: 3rem;
+}
+
+.about-us p {
+  min-width: 50%;
+  max-width: 80%;
+  padding: 3rem 0 0;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.45rem;
+  color: #F9FDFF;
+  line-height: 1.4;
+}
+
+#thank-you {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+}
 
 /* Specials Section */
 
+.specials {
+  display: flex;
+  flex-direction: column;
+  border-bottom: gold solid 5px;
+  padding-bottom: 3rem;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+}
+.specials h2 {
+  display: block;
+  padding: 3rem 0 3rem 0;
+  justify-content: center;
+}
+
+.specials-list {
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.special-offer {
+  background-color: rgb(7, 7, 7);
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+  height: 600px;
+  position: relative;
+  max-width: 80%;
+  width: 450px; 
+  border: white solid 4px;
+  box-shadow: 0px 0px 10px white;
+}
+
+.special-item {
+  height: 4rem;
+  border-bottom: white solid 2px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.special-item h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  color: #F9FDFF;
+  align-content: center;
+
+}
+
+.prices {
+  flex-direction: row;
+  display: flex;
+  height: 4rem;
+}
+
+.price-now {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  font-size: 3rem;
+  width: 300px;
+  padding-right: 1rem;
+  color: #F9FDFF;
+  transform: translateY(.5rem);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.price-was {
+  display: flex;
+  justify-content: flex-end;
+  align-content: first baseline;
+  align-self: flex-end;
+  width: 120px;
+  font-size: 1.251rem;
+  color: #F9FDFF;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.old-price {
+  text-decoration: line-through;
+  padding-left: .4rem;
+  color: rgb(238, 148, 148);
+}
+
+.photo-container img {
+  padding-top: 1.5rem;
+}
+
+
+
 /* Visit Us Section */
 
+.visit-us {
+  padding-top: 3rem;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+  padding-bottom: 3rem;
+  border-bottom: gold solid 5px;
+}
+
+.contact-info p, address, .phone-block p a {
+  color: #F9FDFF;
+  font-size: 1.5rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.contact-info p {
+  margin-bottom: 2rem;
+}
+
+.address-block {
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
 iframe {
-  width: 100%;
+  margin-top: 2rem;
+  width: 80%;
   height: 350px;
 }
 
 /* Footer */
 footer {
-  margin-top: 48px;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 .5rem 0 .5rem;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content p {
+  color: #F9FDFF;
+  font-size: 1.1rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer-content p:last-child {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+/* MAX WIDTH MEDIA QUERY */
+
+@media (max-width: 570px) {
+  .title {
+    font-size: 3rem;
+    min-width: 250px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    min-width: 250px;
+  }
+
+  header .header-content .tagline {
+    margin-top: 1rem;
+    font-size: 1rem;
+    min-width: 250px;
+  }
+
+  .bright {
+    font-size: 1rem;
+  }
+
+  .about-us {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .about-us p{
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+  #thank-you {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p, address, .phone-block p a {
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    padding-bottom: 1.5rem;
+  }
+
+  .special-offer {
+    width: 280px;
+    max-width: 100%;
+    height: 400px;
+    min-width: 260px;
+  }
+
+  .special-item {
+    height: 3rem;
+    overflow-x: hidden;
+    min-width: 270px;
+  }
+
+  .special-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .prices {
+    height: 2.5rem;
+  }
+
+  .price-now {
+    width: 225px;
+    font-size: 2rem;
+  }
+
+  .price-was {
+    width: 75px;
+    font-size: .85rem;
+    transform: translateY(1rem);
+  }
+
+  .photo-container img {
+    max-width: 90%;
+  }
+
+  footer {
+    height: 10rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content p {
+    font-size: 1rem;
+  }
+
+  .footer-content p:last-child {
+  margin-left: 0;
+  padding-bottom: .5rem;
+  }
+
+  .footer-content p:first-child {
+    padding-top: .5rem;
+  }
+}
+
+/* MIN-WIDTH MEDIA QUERY */
+
+@media (min-width: 1100px) {
+  p #about-text,
+  .about-us #about-text,
+  #about-text {
+    max-width: 800px !important;
+    min-width: 500px;
+  }
+  
+  header,
+  .specials {
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .specials h2 {
+    margin-left: calc(50% - 550px);
+  }
+
+  .specials-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .special-offer {
+    width: 280px;
+    max-width: 100%;
+    height: 400px;
+    min-width: 260px;
+  }
+
+  .special-item {
+    height: 3rem;
+    overflow-x: hidden;
+    min-width: 270px;
+  }
+
+  .special-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .prices {
+    height: 2.5rem;
+  }
+
+  .price-now {
+    width: 225px;
+    font-size: 2rem;
+  }
+
+  .price-was {
+    width: 75px;
+    font-size: .85rem;
+    transform: translateY(1rem);
+  }
+
+  .photo-container img {
+    max-width: 90%;
+  }
+
+  .visit-us {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .visit-us h2 {
+    margin-right: calc(50% - 550px);
+    margin-right: 0;
+  }
+
+  iframe {
+    max-width: 900px;
+  }
+
+  footer {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .footer-content {
+    max-width: 900px;
+  }
 }
