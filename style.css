@@ -474,11 +474,6 @@ footer {
     transform: translateX(-.25rem);
   }
 
-  .header-content .title .stack,
-  .header-content .title .stack-2 {
-    margin-left: .5rem;
-  }
-
   .header-content {
     display: flex;
     flex-direction: column;
