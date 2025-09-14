@@ -9,6 +9,16 @@ html {
   width: 100vw;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
+    background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  ); 
 }
 
 body {
@@ -17,6 +27,7 @@ body {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   min-width: 250px;
+  z-index: -1;
 }
 
 /* Base Styles */
@@ -52,6 +63,15 @@ body {
   font-family: "Tinos", serif;
   font-weight: 700;
   font-style: italic;
+
+  
+.edu-nsw-act-cursive-<uniquifier> {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 }
  */
 
@@ -64,20 +84,103 @@ body {
 }
 
 .header-content,
-.about-us h2,
-.about-us p,
-.specials h2,
+#about-us h2,
+#about-us p,
+#specials h2,
 .visit-us h2,
 .visit-us .contact-info,
 .footer-content {
   max-width: 1100px;
 }
 
+nav {
+  height: 120px;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+  border-bottom: 5px solid gold;
+}
+
+nav .navbar .nav-container ul li a {
+  display: block;
+  padding: .75rem 1rem;
+}
+
+#hero {
+  text-decoration: none;
+}
+
+a, a:link, a:visited {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: black 1.5px -.7px .5px;
+}
+
+.nav-container {
+  width: 100%;
+  align-items:center;
+  justify-content: space-between
+}
+
+.navbar .nav-container ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul, nav li {
+  position: static;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0; left: 0; right: 0;
+}
+
+
+
 #hero-container img {
   max-width: 900px;
   border: rgb(136, 217, 159) solid 5px;
   box-shadow: whitesmoke 0px 0px 100px 40px;
 }
+
+#screen-pic-about {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/fatima-garcia-yGGdOJ8P0bk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top center;
+} 
 
 
 header .header-content .tagline {
@@ -100,7 +203,7 @@ h2 {
 /* Header Section */
 header {
   border-bottom: gold solid 5px;
-  padding: 3rem 0 3rem 0;
+  padding: 12rem 0 6rem 0;
   color: #F9FDFF;
   background: linear-gradient(
     to right,
@@ -203,6 +306,8 @@ header {
 /* Images */
 
 
+#rev-right .stories, #rev-right .prices { position: static !important; float: none !important; }
+.stories, .prices { outline: 1px dashed; }
 
 
 #hero-container img {
@@ -236,7 +341,7 @@ main {
 }
 
 /* About Section */
-.about-us {
+#about-us {
   border-bottom: gold solid 5px;
   padding-top: 3rem 0 3rem 0;
   max-width: 100%;
@@ -256,11 +361,11 @@ main {
   ); 
 }
 
-.about-us h2 {
+#about-us h2 {
   padding-top: 3rem;
 }
 
-.about-us p {
+#about-us p {
   min-width: 50%;
   max-width: 80%;
   padding: 3rem 0 0;
@@ -274,6 +379,7 @@ main {
 }
 
 #thank-you {
+  margin-bottom: 4rem;
   padding-bottom: 3rem;
   padding-top: 3rem;
   font-size: 1.6rem;
@@ -282,7 +388,7 @@ main {
 
 /* Specials Section */
 
-.specials {
+#specials, #testimonials {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -299,10 +405,11 @@ main {
     #FFAC38 100%
   );
 }
-.specials h2 {
+
+#specials h2 {
+  overflow-x: hidden;
   display: block;
   padding: 3rem 0 3rem 0;
-  justify-content: center;
 }
 
 .specials-list {
@@ -311,6 +418,7 @@ main {
   align-items: center;
   margin-bottom: 3rem;
 }
+
 
 .special-offer {
   background-color: rgb(7, 7, 7);
@@ -325,6 +433,7 @@ main {
   margin-inline: auto;
 }
 
+
 .special-offer:not(first-child) {
   margin-top: 5rem;
 }
@@ -335,8 +444,11 @@ main {
   display: flex;
   align-content: center;
   justify-content: center;
-  
 }
+
+
+
+
 
 .special-item h3 {
   font-family: "Lato", sans-serif;
@@ -351,12 +463,15 @@ main {
 }
 
 .prices {
+
   flex-direction: row;
   display: flex;
   height: 4rem;
 }
 
-.price-now {
+
+.price-now,
+.quote {
   display: flex;
   justify-content: flex-end;
   align-content: flex-end;
@@ -376,7 +491,7 @@ main {
 
 .price-was {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-content: first baseline;
   align-self: flex-end;
   width: 120px;
@@ -398,6 +513,229 @@ main {
   padding-top: 1.5rem;
   max-width: 90%;
 }
+
+.photo-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Testimonials  */
+
+#testimonials {
+  padding-top: 3rem;
+}
+
+
+#bulletin-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+   box-shadow:#514c42 0px 5px 100px 5px;
+   border:#557022 solid 5px;
+   max-width: 60%;
+   min-width: 40%;
+}
+
+#bulletin-board img {
+  width: 100%;
+  height: 100%;
+}
+
+.board#board {
+
+  background-image: url("img/josephine-barham-KsAo8ouBn8A-unsplash.jpg");
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  align-self: center;
+  max-width: 1100px;
+  height: 50rem;
+  border-radius: 120px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  box-shadow: rgb(50, 46, 46) 5px 5px 100px 10px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 5rem;
+}
+
+.row:first-of-type {
+  margin-top: -2rem;
+}
+.row:nth-of-type(2) {
+  margin-top: 4rem;
+}
+
+#left-one {
+  position: relative;
+  display: flex;
+}
+#left-two {
+  position: relative;
+  display: flex;
+}
+
+#right-one {
+  position: relative;
+  display: flex;
+}
+#right-two {
+  position: relative;
+  display: flex;
+}
+
+
+#testimonial-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  gap: 3rem;
+  width: 100%;
+}
+
+#testimonial-wrapper .left-testy,
+#testimonial-wrapper .right-testy {
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.name-statement {
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+  height:2.75rem !important;
+  min-height: 2.75rem;
+  width: 450px;
+  background-color: #cfc7c0;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.one.right .name-statement,
+#board #right-one {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.two.right .words-box,
+#board #right-two {
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.one.left .name-statement,
+#board #left-one {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.two.left .words-box,
+#board #left-two {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.two .name-statement,
+#board #left-two,
+#board #right-two {
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.one .words-box,
+#board #left-one,
+#board #right-one {
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+
+p.favorite-flower{
+  text-align: left;
+  padding-left: .5rem;
+}
+
+.name-statement > p {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+
+p.customer {
+  padding-left: 1rem;
+}
+
+/* rating – simple & accessible */
+.t-rating{ font-size:1rem; letter-spacing:.1rem; color:#f3b700; padding-right: 2rem }
+
+
+.words-box {
+  display: flex;
+  background-image:linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),
+  url("img/pawel-czerwinski-ctMsz4XbNGU-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100%;
+  min-height: 288px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.words-box > p {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.15rem;
+  padding: .75rem;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+/* design tokens */
+:root{
+  --radius:16px;
+  --bg:#fff;
+  --ink:#111;
+  --muted:#6b6b6b;
+  --accent:#ff6b3d;        /* tweak to your brand */
+  --shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 30px rgba(0,0,0,.08);
+}
+
+
 
 
 
@@ -469,10 +807,10 @@ iframe {
 
 /* Footer */
 footer {
-  height: 3rem;
+  height: 15rem;
   display: flex;
   flex-direction: row;
-  padding-top: 4rem;
+  padding-top: 5rem;
   align-items: center;
   width: 100%;
   padding: 0 .5rem 0 .5rem;
@@ -489,39 +827,186 @@ footer {
 }
 
 .footer-content {
-  display: flex;
-  align-items: center;
   width: 100%;
-  gap: 1rem;
+}
+
+.footer-content .footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-content p {
   margin: 0;
 }
 
-.footer-content p {
+.footer-content .footer-row p {
   color: #F9FDFF;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-shadow: black 1.75px 1.75px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
 }
 
-.footer-content p:last-child {
-  margin-left: auto;
-  margin-right: 1rem;
+footer .footer-content #foot-bottom-row .social img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+}
+
+#foot-top-row {
+  padding-top: 1rem;
+}
+
+#foot-bottom-row {
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+}
+
+.social {
+  height: 32px;
+  width: 32px;
+}
+
+#foot-bottom-row #facebook {
+  background-image: url("img/32px-2023_Facebook_icon.svg.png");
+  background-size:cover;
+  background-position: center;;
 }
 
 /* MAX WIDTH MEDIA QUERY */
+@media (max-width: 1150px) {
+  .board#board {
+    width: 96%;
+  }
 
-@media (max-width: 800px) {
+  #testimonial-wrapper .left-testy,
+  #testimonial-wrapper .right-testy {
+    width: 350px
+  }
+
+  .name-statement {
+    width: 350px;
+  }
+
+  .name-statement > p {
+    font-size: 1.1rem;
+  }
+
+  
+  .words-box > p {
+    font-size: 1rem;
+  }
+
+  #foot-bottom-row {
+    justify-content: space-evenly;
+  }
+
+  
+}
+
+@media (max-width: 840px) {
+  nav {
+    height: 80px;
+  }
+
+   a, a:link, a:visited {
+    font-size: 1.5rem;
+   }
+  .name-statement,
+  #testimonial-wrapper .left-testy,
+  #testimonial-wrapper .right-testy {
+    width: 325px;
+  }
+  
+  .name-statement p {
+    font-size: 1rem;
+  }
+  .words-box p {
+    font-size: 1rem;
+  }
+
   .title {
     font-size: 5.5rem;
-    
+  }
+
+  #testimonial-wrapper {
+    /* height: 2150px; */
+    margin-top: 2rem;
+  }
+
+  .board#board {
+    background: none;
+    background-color: #00000000;
+    background-image: none;
+    min-height: none;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: none;
+    overflow: visible;
+
+ 
+  }
+
+  .row {
+    flex-direction: column;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .card-holder {
+    margin : 1rem 0 1rem 0;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+  }
+  .left-testy,
+  .right-testy {
+    transform: translateY(-1rem);
+  }
+
+  #card-1 {
+    background-image: url("img/jonatan-lindemann-Dv89X4z6-I8-unsplash.jpg");
+  }
+  #card-2 {
+    background-image: url("img/jack-hodges-3zsLlSrxxDM-unsplash.jpg");
+  }
+
+  #card-3 {
+    background-image: url("img/benjamin-lehman-ZSstdCNyJfA-unsplash.jpg");
+  }
+
+  #card-4 {
+    background-image: url("img/mykyta-kondratov-eco5_1zUMzg-unsplash.jpg");
+  }
+
+  .footer-content .footer-row p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 630px) {
+  nav {
+    height: 50px;
+    border-bottom: 2.5px solid gold;
+  }
+  
+  a, a:link, a:visited {
+    font-size: 1.2rem;
+  }
   .title {
     font-size: 3rem;
     min-width: 250px;
@@ -550,7 +1035,7 @@ footer {
     font-size: 1rem;
   }
 
-  .about-us {
+  #about-us {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -558,7 +1043,7 @@ footer {
     max-width: 100%;
   }
 
-  .about-us p{
+  #about-us p{
     font-size: 1.2rem;
     padding-left: 0;
     padding-right: 0;
@@ -623,17 +1108,13 @@ footer {
     height: 10rem;
   }
 
-  .footer-content {
+  #foot-top-row {
     flex-direction: column;
+    gap: .5rem;
   }
 
-  .footer-content p {
-    font-size: 1rem;
-  }
-
-  .footer-content p:last-child {
-  margin-left: 0;
-  padding-bottom: .5rem;
+  .footer-content .footer-row p {
+    font-size: .9rem;
   }
 
   .footer-content p:first-child {
@@ -650,7 +1131,59 @@ footer {
   }
 }
 
+@media (max-width: 525px) {
+  a, a:link, a:visited {
+    font-size: .8rem;
+  }
+  .card-holder {
+    width: 300px;
+    height: 360px;
+  }
+
+    .name-statement,
+    #testimonial-wrapper .left-testy,
+    #testimonial-wrapper .right-testy {
+    width: 220px;
+  }
+
+  div .words-box {
+    height: 100%;
+    min-height: 160px;
+    max-height: 220px;
+  }
+  .words-box p.nice-words {
+    height: 100%;
+  }
+
+  #testimonial-wrapper .left-testy,
+    #testimonial-wrapper .right-testy {
+      height: 250px;
+    }
+    .name-statement p {
+    font-size: .6rem;
+  }
+    .words-box p {
+    font-size: .7rem;
+  }
+
+   .left-testy,
+  .right-testy {
+    transform: translateY(0rem);
+  }
+
+  .t-rating{ font-size:.8rem; letter-spacing:0.01rem; color:#f3b700; padding-right: 1rem }
+
+}
+
 @media (max-width: 350px) {
+
+  nav {
+    min-width: 250px;
+    height: 36px;
+  }
+  a, a:link, a:visited {
+    font-size: .6rem;
+  }
   .title, h2 {
     font-size: 2.2rem;
     max-width: 100%;
@@ -675,7 +1208,7 @@ footer {
      box-shadow: whitesmoke 0px 0px 60px 15px;
   }
 
-  .about-us p {
+  #about-us p {
     font-size: 1rem;
   }
 
@@ -698,15 +1231,20 @@ footer {
   .contact-info .address-block address {
     font-size: .9rem;
   }
-  
-
+  .footer-content .footer-row p {
+    font-size: .8rem;
+  }
+  #foot-bottom-row {
+    justify-content: center;
+    gap: 1.5rem;
+  }
 }
 
 /* MIN-WIDTH MEDIA QUERY */
 
 @media (min-width: 1100px) {
   p #about-text,
-  .about-us #about-text,
+  #about-us #about-text,
   #about-text {
     max-width: 800px !important;
     min-width: 500px;
@@ -723,14 +1261,14 @@ footer {
   }
 
   header,
-  .specials {
+  #specials {
     justify-items: center;
     justify-content: center;
   } 
 
   
 
-  .specials h2 {
+  #specials h2 {
     margin-inline: auto;
   }
 
@@ -794,6 +1332,7 @@ footer {
   .photo-container img {
     max-width: 90%;
   }
+  
 
   .visit-us {
     display: flex;
