@@ -9,7 +9,6 @@ html {
   width: 100vw;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
-  perspective: 1000px;
     background: linear-gradient(
     to right,
     #8A0900 0%,
@@ -107,7 +106,6 @@ nav {
     #FFAC38 100%
   );
   border-bottom: 5px solid gold;
-  position: relative;
 }
 
 nav .navbar .nav-container ul li a {
@@ -163,7 +161,8 @@ nav ul {
   flex-direction: row;
   width: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 2;
+  top: 0; left: 0; right: 0;
 }
 
 
@@ -937,9 +936,17 @@ footer .footer-content #foot-bottom-row .social img {
   }
 
   .board#board {
+    background: none;
+    background-color: #00000000;
     background-image: none;
     min-height: none;
     height: auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: none;
+    overflow: visible;
+
  
   }
 
@@ -1163,6 +1170,8 @@ footer .footer-content #foot-bottom-row .social img {
   .right-testy {
     transform: translateY(0rem);
   }
+
+  .t-rating{ font-size:.8rem; letter-spacing:0.01rem; color:#f3b700; padding-right: 1rem }
 
 }
 
