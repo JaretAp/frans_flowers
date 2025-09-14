@@ -75,7 +75,17 @@ body {
 
 nav {
   height: 120px;
-  background-color: #e93e0a;
+  background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  );
+  border-bottom: 5px solid gold;
   position: relative;
 }
 
@@ -91,7 +101,7 @@ nav .navbar .nav-container ul li a {
 a, a:link, a:visited {
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -160,7 +170,7 @@ h2 {
 /* Header Section */
 header {
   border-bottom: gold solid 5px;
-  padding: 10rem 0 3rem 0;
+  padding: 12rem 0 6rem 0;
   color: #F9FDFF;
   background: linear-gradient(
     to right,
@@ -263,6 +273,8 @@ header {
 /* Images */
 
 
+#rev-right .stories, #rev-right .prices { position: static !important; float: none !important; }
+.stories, .prices { outline: 1px dashed; }
 
 
 #hero-container img {
@@ -334,6 +346,7 @@ main {
 }
 
 #thank-you {
+  margin-bottom: 4rem;
   padding-bottom: 3rem;
   padding-top: 3rem;
   font-size: 1.6rem;
@@ -342,7 +355,7 @@ main {
 
 /* Specials Section */
 
-#specials {
+#specials, #testimonials {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -359,20 +372,34 @@ main {
     #FFAC38 100%
   );
 }
-#specials h2 {
+#specials h2,
+#testimonials h2 {
+  overflow-x: hidden;
   display: block;
   padding: 3rem 0 3rem 0;
-  justify-content: center;
 }
 
-.specials-list {
+.specials-list,
+.testimonials-list {
   max-width: 100%;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
 }
 
-.special-offer {
+.testimonials-list {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+
+.special-offer,
+.reviews {
   background-color: rgb(7, 7, 7);
   padding-bottom: 1rem;
   margin-top: 3rem;
@@ -385,17 +412,114 @@ main {
   margin-inline: auto;
 }
 
+.reviews {
+  position: relative;
+  height: 500px;
+  max-width: 80%;
+  width: 450px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+#rev-left .stories h3 {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+ {
+  height: 60px;
+   border: rgb(136, 217, 159) solid 5px;
+
+}
+
+#rev-right .statement,
+#rev-left .statement {
+   border: rgb(136, 217, 159) solid 5px;
+}
+
+#rev-right .stories h3,
+#rev-left .stories h3{
+  width: 400px;
+  height: 64px;
+
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+#rev-right .content,
+#rev-left .content {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+#rev-right .review-container,
+#rev-left .review-container {
+   width :100%;
+   height: 100%;
+   background-color: rgb(255, 255, 255);
+
+}
+
+
+#testimonials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+}
+
 .special-offer:not(first-child) {
   margin-top: 5rem;
 }
 
-.special-item {
+.special-item, 
+.stories {
   height: 4rem;
   border-bottom: rgb(0, 217, 0) solid 5px;
   display: flex;
   align-content: center;
   justify-content: center;
-  
+}
+
+.stories h3 {
+  justify-self: center;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1.3x;
+  height: 3.5rem;
+  color: white;
+}
+
+.reviews p {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.stories p {
+  color: white;
 }
 
 .special-item h3 {
@@ -410,13 +534,20 @@ main {
 
 }
 
-.prices {
+.prices,
+.headline-story {
+
   flex-direction: row;
   display: flex;
   height: 4rem;
 }
 
-.price-now {
+.headline-story {
+  font-size: 1.2rem;
+}
+
+.price-now,
+.quote {
   display: flex;
   justify-content: flex-end;
   align-content: flex-end;
@@ -436,7 +567,7 @@ main {
 
 .price-was {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-content: first baseline;
   align-self: flex-end;
   width: 120px;
@@ -459,8 +590,19 @@ main {
   max-width: 90%;
 }
 
+.photo-container,
+.review-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow-x: hidden;
+  onerflow-y: hidden;
+}
 
-
+/* Testimonials  */
+#testimonials {
+  padding-top: 3rem;
+}
 /* Visit Us Section */
 
 .visit-us {
