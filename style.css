@@ -10,6 +10,16 @@ html {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   perspective: 1000px;
+    background: linear-gradient(
+    to right,
+    #8A0900 0%,
+    #DA0E00 20%,
+    #FF1100 40%,
+    #FA4536 50%,
+    #FC5E53 60%,
+    #FC754D 80%,
+    #FFAC38 100%
+  ); 
 }
 
 body {
@@ -525,7 +535,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-   box-shadow:#514c42 0px 50px 100px 5px;
+   box-shadow:#514c42 0px 5px 100px 5px;
    border:#557022 solid 5px;
    max-width: 60%;
    min-width: 40%;
@@ -537,8 +547,10 @@ main {
 }
 
 .board#board {
+
   background-image: url("img/josephine-barham-KsAo8ouBn8A-unsplash.jpg");
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   width: 90%;
   align-self: center;
   max-width: 1100px;
@@ -546,6 +558,7 @@ main {
   border-radius: 120px;
   align-content: space-evenly;
   justify-content: space-evenly;
+  box-shadow: rgb(50, 46, 46) 5px 5px 100px 10px;
 }
 
 .row {
@@ -795,10 +808,10 @@ iframe {
 
 /* Footer */
 footer {
-  height: 3rem;
+  height: 15rem;
   display: flex;
   flex-direction: row;
-  padding-top: 4rem;
+  padding-top: 5rem;
   align-items: center;
   width: 100%;
   padding: 0 .5rem 0 .5rem;
@@ -815,27 +828,51 @@ footer {
 }
 
 .footer-content {
-  display: flex;
-  align-items: center;
   width: 100%;
-  gap: 1rem;
+}
+
+.footer-content .footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-content p {
   margin: 0;
 }
 
-.footer-content p {
+.footer-content .footer-row p {
   color: #F9FDFF;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-shadow: black 1.75px 1.75px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
 }
 
-.footer-content p:last-child {
-  margin-left: auto;
-  margin-right: 1rem;
+footer .footer-content #foot-bottom-row .social img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+}
+
+#foot-top-row {
+  padding-top: 1rem;
+}
+
+#foot-bottom-row {
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+}
+
+.social {
+  height: 32px;
+  width: 32px;
+}
+
+#foot-bottom-row #facebook {
+  background-image: url("img/32px-2023_Facebook_icon.svg.png");
+  background-size:cover;
+  background-position: center;;
 }
 
 /* MAX WIDTH MEDIA QUERY */
@@ -860,6 +897,10 @@ footer {
   
   .words-box > p {
     font-size: 1rem;
+  }
+
+  #foot-bottom-row {
+    justify-content: space-evenly;
   }
 
   
@@ -943,6 +984,10 @@ footer {
 
   #card-4 {
     background-image: url("img/mykyta-kondratov-eco5_1zUMzg-unsplash.jpg");
+  }
+
+  .footer-content .footer-row p {
+    font-size: 1.1rem;
   }
 }
 
@@ -1056,17 +1101,13 @@ footer {
     height: 10rem;
   }
 
-  .footer-content {
+  #foot-top-row {
     flex-direction: column;
+    gap: .5rem;
   }
 
-  .footer-content p {
-    font-size: 1rem;
-  }
-
-  .footer-content p:last-child {
-  margin-left: 0;
-  padding-bottom: .5rem;
+  .footer-content .footer-row p {
+    font-size: .9rem;
   }
 
   .footer-content p:first-child {
@@ -1180,6 +1221,13 @@ footer {
 
   .contact-info .address-block address {
     font-size: .9rem;
+  }
+  .footer-content .footer-row p {
+    font-size: .8rem;
+  }
+  #foot-bottom-row {
+    justify-content: center;
+    gap: 1.5rem;
   }
 }
 
