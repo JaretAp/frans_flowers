@@ -813,10 +813,9 @@ iframe {
 
 /* Footer */
 footer {
-  height: 15rem;
+  height: 10rem;
   display: flex;
   flex-direction: row;
-  padding-top: 5rem;
   align-items: center;
   width: 100%;
   padding: 0 .5rem 0 .5rem;
@@ -863,7 +862,7 @@ footer .footer-content #foot-bottom-row .social img {
 }
 
 #foot-bottom-row {
-  padding-bottom: 2.5rem;
+  
   padding-top: 1rem;
 }
 
@@ -906,8 +905,11 @@ footer .footer-content #foot-bottom-row .social img {
   #foot-bottom-row {
     justify-content: space-evenly;
   }
-
-
+  
+  .bio #bio-story #story,
+  .bio-two #bio-story-2 #story-2 {
+    font-size: .8rem;
+  }
 }
 
 @media (max-width: 840px) {
@@ -955,8 +957,11 @@ footer .footer-content #foot-bottom-row .social img {
     outline: none;
     border-radius: none;
     overflow: visible;
+  }
 
-
+   .bio #bio-story #story,
+   .bio-two #bio-story-2 #story-2 {
+    font-size: .6rem;
   }
 
   .row {
@@ -1007,6 +1012,34 @@ footer .footer-content #foot-bottom-row .social img {
   .footer-content .footer-row p {
     font-size: 1.1rem;
   }
+
+  #section-one,
+  #section-two {
+    height: auto;
+  }
+
+  #section-one {
+    margin-top: rem;
+  }
+
+  .bio, .bio-two {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #bio-story-2,
+  #bio-story {
+    max-width: 450px;
+    min-width: 300px;
+  }
+
+  #foot {
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+
 }
 
 @media (max-width: 630px) {
@@ -1142,6 +1175,10 @@ footer .footer-content #foot-bottom-row .social img {
 
   #cta {
     font-size: 2rem;
+  }
+
+  #foot {
+    margin-bottom: 0;
   }
 }
 
@@ -1415,15 +1452,13 @@ footer .footer-content #foot-bottom-row .social img {
 
 #section-one {
   z-index: 1;
-  margin-top: 25vh;
-  height: 25vh;
+  padding-top: 5rem;
+  max-width: 1100px;
 }
 
 #section-two {
   z-index: 1;
-  margin-top: 15vh;
-  height: 25vh;
-  margin-bottom: 10vw;
+  max-width: 1100px;
 }
 
 
@@ -1441,35 +1476,38 @@ footer .footer-content #foot-bottom-row .social img {
 }
 
 #bio-pic img {
-  height: 25vh;
+  max-height: 25vh;
   object-fit: cover;
   object-position: center;
-  display: flex;
 }
 
 #bio-story {
   display: flex;
   width: 40%;
   background-color: white;
-  transform: translateY(5rem);
+  max-width: 450px;
 }
 
-.bio #bio-story p,
-.bio-two #bio-story-2 p {
+#bio-story #story,
+#bio-story-2 #story-2 {
   display: flex;
   font-family: "Edu NSW ACT Cursive", cursive;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-style: normal;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem 1rem;
+  max-height: 25vh;
+  overflow: scroll;
+  min-width: 300px;
 }
+
 
 .bio-two {
   display: flex;
-  justify-content: space-around;
-  align-content: space-between;
+  justify-content: center;
+  align-content: center;;
 }
 
 #bio-2-pic {
@@ -1477,18 +1515,122 @@ footer .footer-content #foot-bottom-row .social img {
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
-
 }
 
 #bio-2-pic img {
   height: 25vh;
   object-fit: cover;
   object-position: center;
-  display: flex;
 }
 
 #bio-story-2 {
   display: flex;
   width: 40%;
   background-color: white;
+  max-width: 450px;
 }
+
+#wrapper-fran {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content :center;
+  justify-items: center;
+  max-height: 2500px;
+}
+
+#foot {
+  max-height: 140px;
+}
+
+
+/***************** HELP ME ******************************/
+
+/* Full-bleed fixed background */
+#screen-pic-about{
+  position: fixed;
+  inset: 0;
+  background: url("img/fatima-garcia-yGGdOJ8P0bk-unsplash.jpg") top center / cover no-repeat;
+  z-index: -1; /* sits behind everything */
+}
+
+/* Layout shell */
+#wrapper-fran{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(96px, 12vh, 160px) 16px 64px; /* top pad clears fixed nav; nice breathing room */
+  display: flex;
+  flex-direction: column;
+  gap: 12vh;
+}
+
+/* Sections should grow naturally (no fixed 25vh) */
+#section-one, #section-two{ z-index: 1; }
+
+/* Two-column biography rows */
+.bio{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Left/right columns */
+#bio-pic, #bio-2-pic{
+  flex: 0 0 38%;
+  aspect-ratio: 4 / 3;     /* consistent shape */
+  overflow: hidden;
+  border-radius: 12px;
+}
+#bio-pic img, #bio-2-pic img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#bio-story, #bio-story-2{
+  flex: 1 1 0;
+  max-width: 620px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 28px rgba(0,0,0,.12);
+}
+
+#bio-story #story, #bio-story-2 #story-2{
+  margin: 0;
+  padding: 1.5rem;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #111;
+  /* let it grow; remove forced scroll */
+  max-height: none;
+  overflow: visible;
+}
+
+/* Second row flips image/text on large screens */
+.bio-two{ flex-direction: row-reverse; }
+
+/* Responsive stack */
+@media (max-width: 800px){
+  .bio, .bio-two,
+  #wrapper-fran {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #bio-pic, #bio-2-pic, #bio-story, #bio-story-2{
+    flex: none; max-width: 350px;
+  }
+}
+
+/* Footer fixes */
+#foot { padding: 24px 16px; }
+.footer-row{ display: flex; gap: 1rem; align-items: center; }
+#foot-top-row{ justify-content: space-between; flex-wrap: wrap; }
+#foot-bottom-row{ justify-content: center; gap: 1.5rem; }
