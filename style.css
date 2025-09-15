@@ -912,7 +912,7 @@ footer .footer-content #foot-bottom-row .social img {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 850px) {
   nav {
     height: 80px;
   }
@@ -1550,7 +1550,8 @@ footer .footer-content #foot-bottom-row .social img {
 /* Full-bleed fixed background */
 #screen-pic-about{
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   background: url("img/fatima-garcia-yGGdOJ8P0bk-unsplash.jpg") top center / cover no-repeat;
   z-index: -1; /* sits behind everything */
 }
@@ -1616,7 +1617,7 @@ footer .footer-content #foot-bottom-row .social img {
 .bio-two{ flex-direction: row-reverse; }
 
 /* Responsive stack */
-@media (max-width: 800px){
+@media (max-width: 850px){
   .bio, .bio-two,
   #wrapper-fran {
     flex-direction: column;
@@ -1624,13 +1625,50 @@ footer .footer-content #foot-bottom-row .social img {
     align-items: center;
     justify-content: center;
   }
-  #bio-pic, #bio-2-pic, #bio-story, #bio-story-2{
-    flex: none; max-width: 350px;
+  #bio-pic, #bio-2-pic, #bio-story, #bio-story-2 {
+    flex: none; max-width: 300px;
+  }
+
+  .bio-two {
+    margin-top: -5rem;
+  }
+
+  main {
+    margin-bottom: 10rem;
   }
 }
 
+@media (max-width: 330px) {
+ 
+
+   .bio, .bio-two,
+  #wrapper-fran {
+    transform: translateX(-.25rem);
+  }
+
+  #foot, .footer-content, .footer-row {
+      max-width: 330px;
+    }
+}
+
+@media (max-width: 305px) {
+   .bio, .bio-two,
+  #wrapper-fran {
+    transform: translateX(-.5rem);
+  }
+}
+
+
+
 /* Footer fixes */
-#foot { padding: 24px 16px; }
+#foot {
+  margin-top: 25rem;
+  padding: 24px 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+  z-index: 5;
+}
 .footer-row{ display: flex; gap: 1rem; align-items: center; }
 #foot-top-row{ justify-content: space-between; flex-wrap: wrap; }
 #foot-bottom-row{ justify-content: center; gap: 1.5rem; }
